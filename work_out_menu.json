@@ -1,0 +1,34 @@
+{
+    "training_name":"my workout everymorning",
+    "author":"JIIOryo",
+    "menu": [
+        {
+            "work_out_name":"sit-ups",
+            "length":1,
+            "times":20,
+            "sets":5,
+            "after_interval": 30
+        },
+        {
+            "work_out_name":"push-ups",
+            "length":2,
+            "times":25,
+            "sets":1,
+            "after_interval": 30
+        },
+        {
+            "work_out_name":"forearm",
+            "length":0.8,
+            "times":230,
+            "sets":1,
+            "after_interval": 30
+        },
+        {
+            "work_out_name":"push-ups",
+            "length":1,
+            "times":4,
+            "sets":20,
+            "after_interval": 0
+        }
+    ]
+}
