@@ -23,6 +23,15 @@ def pi_1sec(SOUND_PIN, length, f):
     return
 
 
+def pi_tsec(SOUND_PIN, length, t, f):
+    if length <= 0 or t <= length:
+        print('Please input an length that is greater than 0 seconds and less than {} second.'.format(t))
+        return
+    pi(SOUND_PIN, length, f)
+    time.sleep(t - length)
+    return
+
+
 def power_up():
 
 
@@ -48,8 +57,8 @@ def power_up():
     return
 
 
-def counter(n):
+def counter(n, t=1):
     for _ in range(n-1):
-        pi_1sec(SOUND_PIN, length, f)
-    pi_1sec(SOUND_PIN, 6 * length,  r ** 5 * f)
+        pi_tsec(SOUND_PIN, length, t, f)
+    pi_1sec(SOUND_PIN, 6 * length, r ** 5 * f)
     return 
