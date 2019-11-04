@@ -54,6 +54,7 @@
 
 
 
+            <button @click="updateTraining">更新</button><br>
             <a href='/'><button>戻る</button></a>
         </div>
     </body>
@@ -97,6 +98,19 @@ var app = new Vue({
         },
         deleteMenu: function(i) {
             this.training.menu.splice(i, 1);
+        },
+        updateTraining: function() {
+            axios.post('/work_out/{{ menu.id }}', this.training)
+                .then(function(response) {
+                    alert('更新しました')
+                }.bind(this))
+                .catch(function(error){
+                    alert('エラーが発生しました。')
+                    this.hasError = true;
+                }.bind(this))
+                .finally(function(){
+                    this.loading = false;
+                }.bind(this))
         }
     }
 })

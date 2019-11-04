@@ -1,5 +1,5 @@
 #coding:utf-8
-from flask import Flask, render_template, redirect, Response, abort
+from flask import Flask, render_template, redirect, Response, abort, request
 import os
 
 from lib.file_services import * 
@@ -51,7 +51,11 @@ def get_work_out(id):
         abort(404)
     return_data = json.dumps(menu, ensure_ascii=False, indent = 6)
     return Response(return_data, mimetype='application/json')
-    
+
+@app.route('/work_out/<int:id>', methods=['POST'])
+def update_work_out(id):
+    print(request.json)
+    return Response(response=None, status=204)
 
 if __name__ == '__main__':
     os.environ['WORK_OUT_SOUNDER_PID'] = '0'
