@@ -14,3 +14,9 @@ r = 1.059
 
 # How many scales to shift in Power Up
 pun = 1
+
+# the frequency of "pi!" in count down
+count_down_f = 493.88
+
+# the length of "piii!" in count down
+count_down_piii_length = 0.4

@@ -4,30 +4,30 @@
     "menu": [
         {
             "work_out_name":"sit-ups",
-            "length":1,
+            "length":0.5,
             "times":20,
-            "sets":5,
-            "after_interval": 30
+            "sets":2,
+            "after_interval": 3
         },
         {
             "work_out_name":"push-ups",
-            "length":2,
-            "times":25,
-            "sets":1,
-            "after_interval": 30
+            "length":0.3,
+            "times":10,
+            "sets":2,
+            "after_interval": 3
         },
         {
             "work_out_name":"forearm",
             "length":0.8,
-            "times":230,
+            "times":20,
             "sets":1,
-            "after_interval": 30
+            "after_interval": 3
         },
         {
             "work_out_name":"push-ups",
             "length":1,
             "times":4,
-            "sets":20,
+            "sets":2,
             "after_interval": 0
         }
     ]

@@ -39,6 +39,14 @@ def work_out_start(file_path):
         
         print(training)
 
+        sound.count_down()
+        for _ in range(sets):
+            sound.counter(times, length)
+
+        time.sleep(after_interval)
+        
+
+
 
     sound.counter(5)
     sound.power_up()

@@ -60,5 +60,15 @@ def power_up():
 def counter(n, t=1):
     for _ in range(n-1):
         pi_tsec(SOUND_PIN, length, t, f)
-    pi_1sec(SOUND_PIN, 6 * length, r ** 5 * f)
+    pi_tsec(SOUND_PIN, 6 * length, t, r ** 5 * f)
     return 
+
+
+
+def count_down():
+    for _ in range(3):
+        pi_1sec(SOUND_PIN, length, count_down_f)
+    pi(SOUND_PIN, count_down_piii_length, count_down_f * r ** 5)
+    time.sleep(1 - count_down_piii_length)
+
+
