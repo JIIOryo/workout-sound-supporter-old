@@ -56,6 +56,6 @@ def work_out_start(file_path):
 if __name__ == '__main__':
 
     init()
-    work_out_start('./work_out_menu.json')
+    work_out_start('./menus/work_out_menu.json')
 
     GPIO.cleanup()
