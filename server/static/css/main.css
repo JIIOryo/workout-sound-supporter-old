@@ -2,3 +2,15 @@
 .title {
     color: red;
 }
+
+
+.menu-box {
+    background-color: #77F;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.delete-menu-button-box {
+    text-align: right;
+}
