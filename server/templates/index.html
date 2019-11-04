@@ -7,8 +7,22 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
-        <h1 class="title"> Hell0! </h1>
+        <h1 class="title"> 筋トレメニュー一覧 </h1>
         {{ s }}
+        <table>
+            <tr>
+                <th><p>タイトル</p></th>
+                <th><p>作者</p></th>
+                <th></th>
+            </tr>
+            {% for menu in menus %}
+            <tr>
+                <td>{{ menu.training_name }}</td>
+                <td>{{ menu.author }}</td>
+                <td><a href="/start/{{ menu.id }}"><button>トレーニング開始</button></a></td>
+            </tr>
+            {% endfor %}
+        </table>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </body>
 </html>

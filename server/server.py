@@ -1,5 +1,5 @@
 #coding:utf-8
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 
 from lib.file_services import * 
 
@@ -8,9 +8,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-
     menus = get_menus()
-    return render_template('index.html', s = menus)
+    return render_template('index.html', menus = menus)
+
+
+@app.route('/start/<int:id>')
+def start(id):
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 8000, debug = True)
