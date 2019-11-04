@@ -19,7 +19,8 @@
             <tr>
                 <td>{{ menu.training_name }}</td>
                 <td>{{ menu.author }}</td>
-                <td><a href="/start/{{ menu.id }}"><button>トレーニング開始</button></a></td>
+                <td><a href="/edit/{{ menu.id }}"><button>トレーニングを編集</button></a></td>
+                <td><a href="/start/{{ menu.id }}"><button>トレーニングを開始</button></a></td>
             </tr>
             {% endfor %}
         </table>

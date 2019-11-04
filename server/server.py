@@ -1,5 +1,5 @@
 #coding:utf-8
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, Response, abort
 import os
 
 from lib.file_services import * 
@@ -34,6 +34,24 @@ def stop():
         os.environ['WORK_OUT_SOUNDER_PID'] = '0'
         print('stop the work out')
     return redirect('/')
+
+
+@app.route('/edit/<int:id>')
+def edit(id):
+    menu = get_workout_by_id(id)
+    if not menu:
+        return redirect('/')
+    return render_template('edit.html', menu = menu)
+
+
+@app.route('/work_out/<int:id>')
+def get_work_out(id):
+    menu = get_workout_by_id(id)
+    if not menu:
+        abort(404)
+    return_data = json.dumps(menu, ensure_ascii=False, indent = 6)
+    return Response(return_data, mimetype='application/json')
+    
 
 if __name__ == '__main__':
     os.environ['WORK_OUT_SOUNDER_PID'] = '0'
