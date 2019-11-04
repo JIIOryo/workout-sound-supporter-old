@@ -5,6 +5,9 @@ from consts import *
 import sound 
 import json
 import subprocess
+import sys
+
+# python main.py {menu path}
 
 def init():
     GPIO.setmode(GPIO.BCM)
@@ -36,7 +39,6 @@ def work_out_start(file_path):
 
         print( training['work_out_name'] + ' start!')
         
-        
         print(training)
 
         sound.count_down()
@@ -44,9 +46,6 @@ def work_out_start(file_path):
             sound.counter(times, length)
 
         time.sleep(after_interval)
-        
-
-
 
     sound.counter(5)
     sound.power_up()
@@ -56,6 +55,6 @@ def work_out_start(file_path):
 if __name__ == '__main__':
 
     init()
-    work_out_start('./menus/work_out_menu.json')
+    work_out_start(sys.argv[1])
 
     GPIO.cleanup()
