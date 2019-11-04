@@ -6,14 +6,14 @@
         {
             "work_out_name":"sit-ups",
             "length":0.5,
-            "times":20,
+            "times":3,
             "sets":2,
             "after_interval": 3
         },
         {
             "work_out_name":"push-ups",
             "length":0.3,
-            "times":10,
+            "times":3,
             "sets":2,
             "after_interval": 3
         },
@@ -27,7 +27,7 @@
         {
             "work_out_name":"push-ups",
             "length":1,
-            "times":4,
+            "times":1,
             "sets":2,
             "after_interval": 0
         }

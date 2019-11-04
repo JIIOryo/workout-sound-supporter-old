@@ -23,3 +23,10 @@ def get_menus():
         menu = json_loader(menu_path)
         menus.append(menu)
     return menus
+
+def get_workout_by_id(id):
+    menus = get_menus()
+    for menu in menus:
+        if menu['id'] == id:
+            return menu
+    return None

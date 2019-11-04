@@ -6,6 +6,7 @@ import sound
 import json
 import subprocess
 import sys
+import os
 
 # python main.py {menu path}
 
@@ -55,6 +56,8 @@ def work_out_start(file_path):
 if __name__ == '__main__':
 
     init()
+    # work out start
     work_out_start(sys.argv[1])
-
+    # work out end
+    print('workout finish!')
     GPIO.cleanup()
