@@ -44,6 +44,11 @@ def edit(id):
     return render_template('edit.html', menu = menu)
 
 
+@app.route('/new')
+def new():
+    return render_template('new.html')
+
+
 @app.route('/work_out/<int:id>')
 def get_work_out(id):
     menu = get_workout_by_id(id)
@@ -58,6 +63,9 @@ def update_work_out(id):
     update_workout_by_id(id, request.json)
     return Response(response=None, status=204)
 
+@app.route('/work_out/new', methods=['POST'])
+def new_work_out():
+    return redirect('/')
 
 if __name__ == '__main__':
     os.environ['WORK_OUT_SOUNDER_PID'] = '0'
