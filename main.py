@@ -28,8 +28,6 @@ def json_loader(file_path):
 def work_out_start(file_path):
     work_out = json_loader(file_path)
 
-    print('Hello {}!'.format(work_out['author']))
-
     trainings = work_out['menu']
     for training in trainings:
 
@@ -38,9 +36,7 @@ def work_out_start(file_path):
         sets = training['sets']
         after_interval = training['after_interval']
 
-        print( training['work_out_name'] + ' start!')
-        
-        print(training)
+        print('workout start!')
 
         sound.count_down()
         for _ in range(sets):
@@ -48,7 +44,6 @@ def work_out_start(file_path):
 
         time.sleep(after_interval)
 
-    sound.counter(5)
     sound.power_up()
 
     

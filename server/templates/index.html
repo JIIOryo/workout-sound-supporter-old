@@ -19,14 +19,12 @@
                     <th>タイトル</th>
                     <th>作者</th>
                     <th></th>
-                    <th></th>
                 </tr>
                 {% for menu in menus %}
                 <tr>
                     <td>{{ menu.training_name }}</td>
                     <td>{{ menu.author }}</td>
-                    <td><a href="/edit/{{ menu.id }}"><button class="button small-button">編集</button></a></td>
-                    <td><a href="/start/{{ menu.id }}"><button class="button small-button">開始</button></a></td>
+                    <td><nobr><a href="/edit/{{ menu.id }}"><button class="button small-button">編集</button></a><a href="/start/{{ menu.id }}"><button class="button small-button">開始</button></a></nobr></td>
                 </tr>
                 {% endfor %}
             </table>

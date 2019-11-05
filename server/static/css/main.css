@@ -213,6 +213,9 @@ body {
 
 /* sp */
 @media screen and (max-width:700px) {
+    .title {
+        font-size: 20px;
+    }
     .table-box {
         width: 97%;
     }
@@ -220,6 +223,17 @@ body {
         font-size: 10px;
         height: 25px;
         width: 50px;
+    }
+    .large-width-button {
+        font-size: 12px;
+        width: 300px;
+    }
+
+    .trainings-table {
+        width: 97%;
+    }
+    .trainings-table td{
+        font-size: 10px;
     }
 }
 

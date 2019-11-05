@@ -12,7 +12,7 @@ def index():
     return render_template('index.html', menus = menus)
 
 
-@app.route('/start/<int:id>')
+@app.route('/start/<string:id>')
 def start(id):
     pid = os.environ.get('WORK_OUT_SOUNDER_PID')
     if pid != '0':
