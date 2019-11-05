@@ -21,20 +21,6 @@
                   "sets": 3, 
                   "after_interval": 3, 
                   "times": 2
-            }, 
-            {
-                  "work_out_name": "4", 
-                  "length": 4, 
-                  "sets": 4, 
-                  "after_interval": 4, 
-                  "times": 4
-            }, 
-            {
-                  "work_out_name": "4", 
-                  "length": 4, 
-                  "sets": 4, 
-                  "after_interval": 0, 
-                  "times": 4
             }
       ], 
       "training_name": "\u3042\u3042\u3042", 

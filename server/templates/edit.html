@@ -53,18 +53,19 @@
                                     </tr>
                                 </table> 
                             </div>
-                            <div>
-                                <button @click="addMenu">メニューを追加</button>
+                            <div class="button-box">
+                                <img src="/static/icon/add-button.png" class="add-menu-button" @click="addMenu">
                             </div>
                         </td>
                     </tr>
                 </table>
             </div>
 
+            <div class="button-box">
+                <button @click="updateTraining" class="button">更新</button><br>
+                <a href='/'><button class="back-button">戻る</button></a>
+            </div>
 
-
-            <button @click="updateTraining">更新</button><br>
-            <a href='/'><button>戻る</button></a>
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>

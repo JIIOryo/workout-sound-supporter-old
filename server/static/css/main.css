@@ -21,6 +21,7 @@ body {
     background-color: #FFF;
     width: 80%;
     margin: auto;
+    margin-bottom: 30px;
     margin-top: 40px;
     border-radius: 20px;
     box-shadow: 5px 5px 10px #2285;
@@ -35,6 +36,10 @@ body {
     padding: 5px;
     box-shadow: 3px 3px 5px #2285;
     color: #FFF;
+}
+
+.delete-menu-button-box {
+    text-align: center;
 }
 
 .menu-i-text {
@@ -57,9 +62,6 @@ body {
     margin: auto;
 }
 
-.delete-menu-button-box {
-    text-align: center;
-}
 
 
 
@@ -89,6 +91,69 @@ body {
 }
 .x-mark span::after {
   transform: rotate(45deg);
+}
+
+.add-menu-button {
+    width: 50px;
+    transition: 0.1s;
+}
+.add-menu-button:hover {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+.button-box {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.button {
+  width: 180px;
+  height: 60px;
+  margin: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #FDA;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+.button:hover {
+    background-color: #FA0;
+    box-shadow: 0px 15px 20px #FA08;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.back-button {
+  width: 180px;
+  height: 60px;
+  margin: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.back-button:hover {
+    background-color: white;
+    color: #000;
+    box-shadow: 0px 10px 20px #FA08;
+    transform: translateY(-3px);
 }
 
 /* pc */
