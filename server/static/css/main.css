@@ -79,6 +79,11 @@ body {
     margin: auto;
 }
 
+.menus-wrapper {
+    margin: auto;
+    width: 300px;
+    text-align: center;
+}
 
 
 
