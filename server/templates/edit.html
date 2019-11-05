@@ -86,25 +86,25 @@ trainingValidationCheck = function(trainingObj) {
     }
 
     menus = trainingObj.menu;
-    for (menu of menus) {
+    menus.map(function(menu, i) {
 
         ithMessage = ''
         work_out_name = menu.work_out_name
         
         if (!work_out_name) {
-            ithMessage += 'i+1番目のトレーニング名が入力されていません\n'
+            ithMessage += '筋トレ' + String(i + 1) + 'のトレーニング名が入力されていません\n'
         }
         if (isNaN(menu.length)) {
-            ithMessage += 'i+1番目のlengthが数字ではありません\n'
+            ithMessage += '筋トレ' + String(i + 1) + 'の間隔が数字ではありません\n'
         }
         if (isNaN(menu.times)) {
-            ithMessage += 'i+1番目のtimesが数字ではありません\n'
+            ithMessage += '筋トレ' + String(i + 1) + 'の回数が数字ではありません\n'
         }
         if (isNaN(menu.sets)) {
-            ithMessage += 'i+1番目のsetsが数字ではありません\n'
+            ithMessage += '筋トレ' + String(i + 1) + 'のセット数が数字ではありません\n'
         }
         if (isNaN(menu.after_interval)) {
-            ithMessage += 'i+1番目のafter intervalが数字ではありません\n'
+            ithMessage += '筋トレ' + String(i + 1) + 'の休憩時間が数字ではありません\n'
         }
         if (!ithMessage) {
             length = Number(menu.length)
@@ -122,7 +122,7 @@ trainingValidationCheck = function(trainingObj) {
         } else {
             message += ithMessage
         }
-    }
+    });
     return {
         formated_training_obj: formatedTrainingObj,
         message: message,
@@ -180,6 +180,7 @@ var app = new Vue({
             axios.post('/work_out/{{ menu.id }}', validationResult.formated_training_obj)
                 .then(function(response) {
                     alert('更新しました')
+                    window.location.href = '/';
                 }.bind(this))
                 .catch(function(error){
                     alert('エラーが発生しました。')
