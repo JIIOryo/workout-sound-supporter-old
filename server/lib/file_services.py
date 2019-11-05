@@ -30,3 +30,11 @@ def get_workout_by_id(id):
         if menu['id'] == id:
             return menu
     return None
+
+
+
+def update_workout_by_id(id, new_menu):
+    f = open('/home/pi/workout-sound-supporter/menus/{}.json'.format(id), 'w')
+    json.dump(new_menu , f, indent = 6)
+    f.close()
+    return 

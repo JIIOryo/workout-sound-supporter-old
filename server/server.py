@@ -52,10 +52,12 @@ def get_work_out(id):
     return_data = json.dumps(menu, ensure_ascii=False, indent = 6)
     return Response(return_data, mimetype='application/json')
 
+
 @app.route('/work_out/<int:id>', methods=['POST'])
 def update_work_out(id):
-    print(request.json)
+    update_workout_by_id(id, request.json)
     return Response(response=None, status=204)
+
 
 if __name__ == '__main__':
     os.environ['WORK_OUT_SOUNDER_PID'] = '0'

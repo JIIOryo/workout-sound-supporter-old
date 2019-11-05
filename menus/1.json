@@ -1,35 +1,42 @@
 {
-    "id":1,
-    "training_name":"my workout everymorning",
-    "author":"JIIOryo",
-    "menu": [
-        {
-            "work_out_name":"sit-ups",
-            "length":0.5,
-            "times":3,
-            "sets":2,
-            "after_interval": 3
-        },
-        {
-            "work_out_name":"push-ups",
-            "length":0.3,
-            "times":3,
-            "sets":2,
-            "after_interval": 3
-        },
-        {
-            "work_out_name":"forearm",
-            "length":0.8,
-            "times":20,
-            "sets":1,
-            "after_interval": 3
-        },
-        {
-            "work_out_name":"push-ups",
-            "length":1,
-            "times":1,
-            "sets":2,
-            "after_interval": 0
-        }
-    ]
+      "menu": [
+            {
+                  "work_out_name": "sit-ups", 
+                  "length": 0.5, 
+                  "times": 3, 
+                  "after_interval": 3, 
+                  "sets": 2
+            }, 
+            {
+                  "work_out_name": "push-ups", 
+                  "length": 0.3, 
+                  "times": 3, 
+                  "after_interval": 3, 
+                  "sets": 2
+            }, 
+            {
+                  "work_out_name": "forearm", 
+                  "length": 0.8, 
+                  "times": 20, 
+                  "after_interval": 3, 
+                  "sets": 1
+            }, 
+            {
+                  "work_out_name": "push-ups", 
+                  "length": 1, 
+                  "times": 1, 
+                  "after_interval": 0, 
+                  "sets": 2
+            }, 
+            {
+                  "work_out_name": "new training", 
+                  "length": "", 
+                  "sets": "3", 
+                  "after_interval": "5", 
+                  "times": "1"
+            }
+      ], 
+      "training_name": "my workout everymorning", 
+      "id": 1, 
+      "author": "JIIOryo"
 }
