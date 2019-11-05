@@ -2,29 +2,37 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <title>トレーニング一覧</title>
         <meta name="description" content="説明文">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
-        <h1 class="title"> 筋トレメニュー一覧 </h1>
-        {{ s }}
-        <table>
-            <tr>
-                <th><p>タイトル</p></th>
-                <th><p>作者</p></th>
-                <th></th>
-            </tr>
-            {% for menu in menus %}
-            <tr>
-                <td>{{ menu.training_name }}</td>
-                <td>{{ menu.author }}</td>
-                <td><a href="/edit/{{ menu.id }}"><button>トレーニングを編集</button></a></td>
-                <td><a href="/start/{{ menu.id }}"><button>トレーニングを開始</button></a></td>
-            </tr>
-            {% endfor %}
-        </table>
-        <a href="/stop"><button>現在実行中のトレーニングを強制終了</button></a>
+        <div class="table-box">
+            <div class="title-wrapper">
+                <h1 class="title"> トレーニング一覧 </h1>
+            </div>
+            <table class="trainings-table">
+                <tr>
+                    <th>タイトル</th>
+                    <th>作者</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                {% for menu in menus %}
+                <tr>
+                    <td>{{ menu.training_name }}</td>
+                    <td>{{ menu.author }}</td>
+                    <td><a href="/edit/{{ menu.id }}"><button class="button small-button">編集</button></a></td>
+                    <td><a href="/start/{{ menu.id }}"><button class="button small-button">開始</button></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="button-box">
+            <a href="/stop"><button class="button large-width-button">新規トレーニングを追加</button></a><br>
+            <a href="/stop"><button class="button large-width-button terminate-button">現在実行中のトレーニングを強制終了</button></a>
+        </div>
         <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </body>
 </html>

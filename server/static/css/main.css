@@ -17,6 +17,23 @@ body {
 }
 
 
+.trainings-table {
+    width: 80%;
+    margin: auto;
+}
+.trainings-table th {
+	background: #99F;
+    color: #FFF;
+}
+.trainings-table td {
+	background: #eee;
+    text-align: center;
+}
+.trainings-table tr:nth-child(odd) td {
+	background: #fff;
+}
+
+
 .table-box {
     background-color: #FFF;
     width: 80%;
@@ -95,7 +112,7 @@ body {
 
 .add-menu-button {
     width: 50px;
-    transition: 0.1s;
+    transition: 0.25s;
 }
 .add-menu-button:hover {
     opacity: 0.9;
@@ -156,6 +173,31 @@ body {
     transform: translateY(-3px);
 }
 
+.large-width-button {
+    font-size: 15px;
+    height: 40px;
+    width: 350px;
+}
+
+.terminate-button {
+    background-color: #F304;
+}
+.terminate-button:hover {
+    background-color: #F33;
+    box-shadow: 0px 10px 20px #F304;
+}
+
+
+.small-button {
+    font-size: 15px;
+    height: 40px;
+    width: 90px;
+}
+
+.small-button:hover {
+    box-shadow: 0px 5px 10px #FA08;
+}
+
 /* pc */
 @media screen and (min-width:701px) {
     .x-mark:hover {
@@ -166,5 +208,13 @@ body {
 
 /* sp */
 @media screen and (max-width:700px) {
+    .table-box {
+        width: 97%;
+    }
+    .small-button {
+        font-size: 10px;
+        height: 25px;
+        width: 50px;
+    }
 }
 
