@@ -30,7 +30,7 @@
             }, 
             {
                   "work_out_name": "new training", 
-                  "length": "", 
+                  "length": "0.4", 
                   "sets": "3", 
                   "after_interval": "5", 
                   "times": "1"
@@ -38,5 +38,5 @@
       ], 
       "training_name": "my workout everymorning", 
       "id": 1, 
-      "author": "JIIOryo"
+      "author": "\u5ddd\u53e3\u907c"
 }
