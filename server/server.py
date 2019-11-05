@@ -39,7 +39,6 @@ def stop():
 @app.route('/edit/<string:id>')
 def edit(id):
     menu = get_workout_by_id(id)
-    print(menu)
     if not menu:
         return redirect('/')
     return render_template('edit.html', menu = menu)
