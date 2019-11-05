@@ -4,32 +4,39 @@
             {
                   "work_out_name": "\u7b4b\u30c8\u30ec", 
                   "length": 1, 
-                  "sets": 31, 
+                  "sets": 3, 
                   "after_interval": 4, 
                   "times": 2
             }, 
             {
                   "work_out_name": "as", 
                   "length": 12, 
-                  "sets": 1, 
+                  "sets": 0, 
                   "after_interval": 9, 
                   "times": 4
             }, 
             {
                   "work_out_name": "asdfasaaaaaa", 
-                  "length": 0, 
-                  "sets": 0, 
-                  "after_interval": 0, 
-                  "times": 0
+                  "length": 2, 
+                  "sets": 3, 
+                  "after_interval": 3, 
+                  "times": 2
             }, 
             {
-                  "work_out_name": "asmfs", 
-                  "length": 0, 
-                  "sets": 0, 
+                  "work_out_name": "4", 
+                  "length": 4, 
+                  "sets": 4, 
+                  "after_interval": 4, 
+                  "times": 4
+            }, 
+            {
+                  "work_out_name": "4", 
+                  "length": 4, 
+                  "sets": 4, 
                   "after_interval": 0, 
-                  "times": 0
+                  "times": 4
             }
       ], 
-      "training_name": "\u3068\u308c\u30fc\u306b\u3093\u3050\u3081\u3044", 
+      "training_name": "\u3042\u3042\u3042", 
       "author": "asfasfa"
 }

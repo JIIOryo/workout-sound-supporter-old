@@ -2,59 +2,64 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
         <title>{{ menu.training_name }}を編集</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
         <div id="app">
-            <h1>{{ menu.training_name }}を編集</h1>
 
-
-            <table>
-                <tr>
-                    <td><p>トレーニング名</p></td>
-                    <td><input type="text" v-model="training.training_name"></td>
-                </tr>
-                <tr>
-                    <td><p>作者</p></td>
-                    <td><input type="text" v-model="training.author"></td>
-                </tr>
-                <tr>
-                    <td><p>メニュー</p></td>
-                    <td>
-                        <div v-for="(menu, i) of training.menu" :key="i" class="menu-box">
-                            <div class="delete-menu-button-box">
-                                <button @click="deleteMenu(i)">削除</button>
+            <div class="table-box">
+                <div class="title-wrapper">
+                    <h1 class="title">{{ menu.training_name }}を編集</h1>
+                </div>
+                <table class="edit-table">
+                    <tr>
+                        <td><p>トレーニング名</p></td>
+                        <td><input type="text" v-model="training.training_name"></td>
+                    </tr>
+                    <tr>
+                        <td><p>作者</p></td>
+                        <td><input type="text" v-model="training.author"></td>
+                    </tr>
+                    <tr>
+                        <td><p>メニュー</p></td>
+                        <td>
+                            <div v-for="(menu, i) of training.menu" :key="i" class="menu-box">
+                                <div class="delete-menu-button-box">
+                                    <span class="menu-i-text">筋トレ{{ '{{ i + 1 }}' }}</span>
+                                    <div class="x-mark" @click="deleteMenu(i)"><span></span></div>
+                                </div>
+                                <table>
+                                    <tr>
+                                        <td class="work-out-name">筋トレ名</td>
+                                        <td><input type="text" v-model="menu.work_out_name" class="work_out_name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>間隔[s]</td>
+                                        <td><input type="text" v-model="menu.length"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>回数</td>
+                                        <td><input type="text" v-model="menu.times"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>セット数</td>
+                                        <td><input type="text" v-model="menu.sets"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>休憩時間</td>
+                                        <td><input type="text" v-model="menu.after_interval"></td>
+                                    </tr>
+                                </table> 
                             </div>
-                            <table>
-                                <tr>
-                                    <td>筋トレ名</td>
-                                    <td><input type="text" v-model="menu.work_out_name"></td>
-                                </tr>
-                                <tr>
-                                    <td>間隔[s]</td>
-                                    <td><input type="text" v-model="menu.length"></td>
-                                </tr>
-                                <tr>
-                                    <td>回数</td>
-                                    <td><input type="text" v-model="menu.times"></td>
-                                </tr>
-                                <tr>
-                                    <td>セット数</td>
-                                    <td><input type="text" v-model="menu.sets"></td>
-                                </tr>
-                                <tr>
-                                    <td>休憩時間</td>
-                                    <td><input type="text" v-model="menu.after_interval"></td>
-                                </tr>
-                            </table> 
-                        </div>
-                        <div>
-                            <button @click="addMenu">メニューを追加</button>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                            <div>
+                                <button @click="addMenu">メニューを追加</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
 
 

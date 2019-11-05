@@ -1,16 +1,105 @@
 
+body {
+	background-color: #DDF;
+}
+
 .title {
-    color: red;
+    text-align: center;
+    margin-bottom: -1mm;
+    
+}
+
+.title-wrapper {
+    border-bottom: solid 5px #FFC778;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 
+.table-box {
+    background-color: #FFF;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #2285;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
 .menu-box {
-    background-color: #77F;
+    background-color: #99F;
     margin: 5px;
     border-radius: 5px;
     padding: 5px;
+    box-shadow: 3px 3px 5px #2285;
+    color: #FFF;
+}
+
+.menu-i-text {
+    font-size: 20px;
+    color: #FB7;
+    /*
+    text-shadow: 1px 1px 1px #FFF,
+                 -1px 1px 1px #FFF,
+                 1px -1px 1px #FFF,
+                 -1px -1px 1px #FFF;
+    */
+}
+
+.work_out_name {
+    padding-bottom: 2px;
+}
+
+
+.edit-table {
+    margin: auto;
 }
 
 .delete-menu-button-box {
-    text-align: right;
+    text-align: center;
 }
+
+
+
+.x-mark {
+    display: inline-block;
+    float: right;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.13s;
+}
+.x-mark span::before,
+.x-mark span::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 84%;
+    height: 16%;
+    margin: -8% 0 0 -42%;
+    background: #EEE;
+}
+.x-mark span::before {
+  transform: rotate(-45deg);
+}
+.x-mark span::after {
+  transform: rotate(45deg);
+}
+
+/* pc */
+@media screen and (min-width:701px) {
+    .x-mark:hover {
+        background: #D77;
+        border-radius: 2px;
+    }
+}
+
+/* sp */
+@media screen and (max-width:700px) {
+}
+
