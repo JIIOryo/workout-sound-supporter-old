@@ -2,6 +2,9 @@
 
 import subprocess
 import json
+import datetime
+import hashlib
+import random
 
 def get_all_files(path):
     cmd = 'ls -1 {0}'.format( path )
@@ -38,3 +41,15 @@ def update_workout_by_id(id, new_menu):
     json.dump(new_menu , f, indent = 6)
     f.close()
     return 
+
+
+def create_workout(new_menu):
+    now = datetime.datetime.now()
+    dat = now.strftime("%Y-%m-%d-%H:%M:%S ") + str(random.random())
+    id = hashlib.md5(dat.encode()).hexdigest()
+    new_menu['id'] = id
+    f = open('/home/pi/workout-sound-supporter/menus/{}.json'.format(id), 'w')
+    json.dump(new_menu , f, indent = 6)
+    f.close()
+    return 
+    

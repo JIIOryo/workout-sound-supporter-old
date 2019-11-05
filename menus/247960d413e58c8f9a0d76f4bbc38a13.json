@@ -1,0 +1,21 @@
+{
+      "id": "247960d413e58c8f9a0d76f4bbc38a13", 
+      "menu": [
+            {
+                  "work_out_name": "\u8179\u7b4b", 
+                  "length": 1, 
+                  "sets": 3, 
+                  "after_interval": 10, 
+                  "times": 10
+            }, 
+            {
+                  "work_out_name": "\u3042\u3042\u3042", 
+                  "length": 0.5, 
+                  "sets": 1, 
+                  "after_interval": 1, 
+                  "times": 10
+            }
+      ], 
+      "training_name": "\u3042\u3042\u3042", 
+      "author": "\u5ddd\u53e3\u3000\u907c"
+}

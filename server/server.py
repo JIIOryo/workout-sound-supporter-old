@@ -36,9 +36,10 @@ def stop():
     return redirect('/')
 
 
-@app.route('/edit/<int:id>')
+@app.route('/edit/<string:id>')
 def edit(id):
     menu = get_workout_by_id(id)
+    print(menu)
     if not menu:
         return redirect('/')
     return render_template('edit.html', menu = menu)
@@ -49,7 +50,7 @@ def new():
     return render_template('new.html')
 
 
-@app.route('/work_out/<int:id>')
+@app.route('/work_out/<string:id>')
 def get_work_out(id):
     menu = get_workout_by_id(id)
     if not menu:
@@ -58,13 +59,14 @@ def get_work_out(id):
     return Response(return_data, mimetype='application/json')
 
 
-@app.route('/work_out/<int:id>', methods=['POST'])
+@app.route('/work_out/<string:id>', methods=['POST'])
 def update_work_out(id):
     update_workout_by_id(id, request.json)
     return Response(response=None, status=204)
 
 @app.route('/work_out/new', methods=['POST'])
 def new_work_out():
+    create_workout(request.json)
     return redirect('/')
 
 if __name__ == '__main__':
