@@ -15,3 +15,10 @@ pip install -r requirements.txt
 python server/server.py
 ```
 
+```
+http://{raspiのipアドレス}:8000
+```
+で接続
+
+![test](https://raw.githubusercontent.com/JIIOryo/workout-sound-supporter/img/img/a.png)
+![test](https://raw.githubusercontent.com/JIIOryo/workout-sound-supporter/img/img/b.png)
