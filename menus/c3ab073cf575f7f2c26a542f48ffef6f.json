@@ -1,0 +1,14 @@
+{
+      "id": "c3ab073cf575f7f2c26a542f48ffef6f", 
+      "menu": [
+            {
+                  "work_out_name": "\u8155\u7acb\u3066", 
+                  "length": 1, 
+                  "sets": 3, 
+                  "after_interval": 1, 
+                  "times": 10
+            }
+      ], 
+      "training_name": "hoge", 
+      "author": "taro"
+}

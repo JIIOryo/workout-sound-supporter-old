@@ -20,7 +20,7 @@ def start(id):
     menus = get_menus()
     for menu in menus:
         if menu['id'] == id:
-            cmd = 'python /home/pi/workout-sound-supporter/main.py /home/pi/workout-sound-supporter/menus/{}.json'.format(id)
+            cmd = 'python /home/pi/workout-sound-supporter-old/main.py /home/pi/workout-sound-supporter-old/menus/{}.json'.format(id)
             proc = subprocess.Popen(cmd.split())
             os.environ['WORK_OUT_SOUNDER_PID'] = str(proc.pid)
     return render_template('work_out.html', menu = get_workout_by_id(id))
